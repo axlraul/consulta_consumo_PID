@@ -1,18 +1,16 @@
 #!/bin/bash
-#Raul Perez
-#20/03/2022
+ 
 # Script para consultar si una c4d3n4 esta consumiendo en maquina
  
-USER="usuario_c4n3n4"
+USER="pZZMMB4"
 sumCPUchilds="0.0"
 sumMEMchilds="0.0"
-
 echo "Introduce la c4d3n4 a consultar"
-read C4d3n4
-scriptC4d3n4=$C4d3n4.sh
-echo $scriptC4d3n4
-comando=`ps -ef | grep $scriptC4d3n4 | grep $USER | grep root`
-        PID=`echo $comando | awk -F' ' '{ print $2 }'` #PID es el PID del script que ejecuta la c4d3n4 (lo que llamamos proceso padre)
+read C4D3N4
+scriptC4D3N4=$C4D3N4.sh
+echo $scriptC4D3N4
+comando=`ps -ef | grep $scriptC4D3N4 | grep $USER | grep root`
+        PID=`echo $comando | awk -F' ' '{ print $2 }'` #PID es el PID del script que ejecuta la C4D3N4 (lo que llamamos proceso padre)
         ChildPIDS=$(pstree -p $PID | grep -oP '\(\K[^\)]+')  #permite que los PID salgan sin simbolos mostrando la relacion entre los pid
 echo "Proceso padre $PID"
 echo -e "Procesos padre + hijos \n$ChildPIDS"
@@ -27,7 +25,7 @@ do
   sumMEMchilds=$(echo $sumMEMchilds + $MEM | bc)
 done <<< "$ChildPIDS"
  
-echo "Consumo total c4d3n4 $C4n3n4:"
+echo "Consumo total c4d3n4 $C4D3N4:"
 echo "CPU= $sumCPUchilds"
 echo "RAM= $sumMEMchilds"
  
@@ -37,3 +35,4 @@ then
 else
   echo "la c4d3n4 SI esta consumiendo"
 fi
+
