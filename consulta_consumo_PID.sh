@@ -27,7 +27,7 @@ do
   sumMEMchilds=$(echo $sumMEMchilds + $MEM | bc)
 done <<< "$ChildPIDS"
  
-echo "Consumo total cadena $C4n3n4:"
+echo "Consumo total c4d3n4 $C4n3n4:"
 echo "CPU= $sumCPUchilds"
 echo "RAM= $sumMEMchilds"
  
