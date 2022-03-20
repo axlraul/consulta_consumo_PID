@@ -9,7 +9,7 @@ sumMEMchilds="0.0"
 
 echo "Introduce la c4d3n4 a consultar"
 read C4d3n4
-scriptCADENA=$C4d3n4.sh
+scriptC4d3n4=$C4d3n4.sh
 echo $scriptC4d3n4
 comando=`ps -ef | grep $scriptC4d3n4 | grep $USER | grep root`
         PID=`echo $comando | awk -F' ' '{ print $2 }'` #PID es el PID del script que ejecuta la c4d3n4 (lo que llamamos proceso padre)
